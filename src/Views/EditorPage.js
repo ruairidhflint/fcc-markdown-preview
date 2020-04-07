@@ -6,6 +6,9 @@ import styled from 'styled-components';
 import Editor from '../Components/Editor';
 import Preview from '../Components/Preview';
 
+const defaultText = "## Hello world! \n This is my message to you!";
+
+
 const StyledEditorContainer = styled.div`
   width: 100%;
   height: 100vh;
@@ -16,7 +19,7 @@ const StyledEditorContainer = styled.div`
   margin-top: 5rem;
 `;
 function EditorPage() {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState(defaultText);
 
   const handleChange = (e) => {
     setInput(e.target.value);

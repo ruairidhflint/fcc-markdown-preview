@@ -1,7 +1,8 @@
 // Libraries
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import { StyledRetroMarkdown } from '../Styles/markDownStyle';
 
@@ -23,11 +24,18 @@ const StyledPreview = styled.div`
 `;
 
 function Preview({ markdown }) {
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    setCopied(false);
+  }, [markdown]);
   return (
     <StyledPreview>
       <div className="editor-preview">
         <h2>Preview</h2>
-        <button id="copy">Copy to Clipboard</button>
+        <CopyToClipboard text={markdown} onCopy={() => setCopied(true)}>
+          <button id="copy">{copied ? 'Copied' : 'Copy'} </button>
+        </CopyToClipboard>
       </div>
       <StyledRetroMarkdown id="preview">
         <ReactMarkdown source={markdown} />

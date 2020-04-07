@@ -11,7 +11,7 @@ const defaultText = "# This is a header\n## This a secondary header\n[This is a 
 
 const StyledEditorContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

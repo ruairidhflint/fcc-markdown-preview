@@ -7,7 +7,7 @@ import {StyledMarkdown} from '../Styles/markDownStyle';
 
 const StyledPreview = styled.div`
   width: 90%;
-  height: 60vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

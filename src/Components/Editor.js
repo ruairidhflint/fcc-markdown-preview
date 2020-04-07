@@ -5,12 +5,12 @@ import styled from 'styled-components';
 const StyledEditor = styled.textarea`
   width: 90%;
   height: 25vh;
-  border: 1px solid red;
+  border: 2px solid black;
   resize: none;
 `;
 
-function Editor() {
-  return <StyledEditor></StyledEditor>;
+function Editor({ input, handleChange }) {
+  return <StyledEditor onChange={handleChange} value={input} ></StyledEditor>;
 }
 
 export default Editor;

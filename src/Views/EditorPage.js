@@ -1,5 +1,5 @@
 // Libraries
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 // Components
@@ -14,12 +14,17 @@ const StyledEditorContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   margin-top: 5rem;
-
 `;
 function EditorPage() {
+  const [input, setInput] = useState('');
+
+  const handleChange = (e) => {
+    setInput(e.target.value);
+  };
+
   return (
     <StyledEditorContainer id="main">
-      <Editor />
+      <Editor handleChange={handleChange} input={input} />
       <Preview />
     </StyledEditorContainer>
   );

@@ -1,5 +1,5 @@
 // Libraries
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import styled from 'styled-components';
 
 const StyledInputContainer = styled.div`
@@ -21,13 +21,22 @@ const StyledEditor = styled.textarea`
 `;
 
 function Editor({ input, handleChange, save, clear }) {
+    const [saved, setSaved] = useState(false);
+    const callSave = () => {
+        save();
+        setSaved(true);
+    }
+
+    useEffect(() => {
+        setSaved(false);
+    }, [input])
   return (
     <StyledInputContainer>
       <div className="editor-preview">
         <h2>Input</h2>
         <div className="buttons">
-          <button onClick={save} id="save">
-            Save
+          <button onClick={callSave} id="save">
+            {saved ? 'Saved' : 'Save'}
           </button>
           <button onClick={clear} id="clear">
             Clear

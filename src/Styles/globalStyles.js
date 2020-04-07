@@ -32,14 +32,15 @@ footer, header, hgroup, menu, nav, section {
 }
 
 :root {
-    font-size: 62.5%;
+	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 body {
 	font-size: 67.5%;
     line-height: 1;
     box-sizing: border-box;
-    font-family: ${props => props.theme.mainFont};
+    font-family: ${(props) => props.theme.mainFont};
 }
 
 ol, ul {
@@ -61,6 +62,22 @@ table {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+h1 {
+	font-family: ${(props) => props.theme.titleFont};
+	font-size: 7rem;
+	max-width: 80%;
+	margin: 1rem;
+	text-align: center;
+
+	@media(max-width:750px){
+		max-width: 90%;
+	}
+
+	@media(max-width:500px){
+		font-size: 5rem;
+	}
 }
 `;
 

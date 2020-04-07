@@ -9,6 +9,7 @@ import { theme } from './Styles/themes';
 // Views
 import LandingPage from './Views/LandingPage';
 import EditorPage from './Views/EditorPage';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <div className="App">
         <LandingPage />
         <EditorPage />
+        <Footer />
       </div>
     </ThemeProvider>
   );

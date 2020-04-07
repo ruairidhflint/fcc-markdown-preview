@@ -16,7 +16,7 @@ const StyledEditorContainer = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin: 5rem 0;
+  margin: 5rem 0 0 0;
 
   .editor-preview {
     width: 100%;
@@ -83,7 +83,7 @@ function EditorPage() {
   const download = () => {
     let blob = new Blob([input], { type: 'txt' });
 
-    var a = document.createElement('a');
+    let a = document.createElement('a');
     a.download = 'markdown';
     a.href = URL.createObjectURL(blob);
     a.dataset.downloadurl = ['txt', a.download, a.href].join(':');

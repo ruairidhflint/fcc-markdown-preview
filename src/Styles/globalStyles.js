@@ -39,6 +39,7 @@ body {
 	font-size: 67.5%;
     line-height: 1;
     box-sizing: border-box;
+    font-family: ${props => props.theme.mainFont};
 }
 
 ol, ul {

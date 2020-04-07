@@ -63,6 +63,12 @@ const StyledLanding = styled.div`
     font-size: 1.8rem;
     border-radius: 0.5rem;
     margin-top: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+
+    :hover {
+      transition: transform 0.3s ease-in-out;
+      transform: scale(1.08);
+    }
   }
 `;
 

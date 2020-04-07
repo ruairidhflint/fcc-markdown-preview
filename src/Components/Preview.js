@@ -25,7 +25,10 @@ const StyledPreview = styled.div`
 function Preview({ markdown }) {
   return (
     <StyledPreview>
-      <div className="editor-preview"><h2>Preview</h2></div>
+      <div className="editor-preview">
+        <h2>Preview</h2>
+        <button id="copy">Copy to Clipboard</button>
+      </div>
       <StyledRetroMarkdown id="preview">
         <ReactMarkdown source={markdown} />
       </StyledRetroMarkdown>

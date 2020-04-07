@@ -6,6 +6,7 @@ import { StyledInputContainer, StyledEditor } from './EditorStyle';
 
 function Editor({ input, handleChange, save, clear, confirmClear }) {
   const [saved, setSaved] = useState(false);
+
   const callSave = () => {
     save();
     setSaved(true);
@@ -14,6 +15,7 @@ function Editor({ input, handleChange, save, clear, confirmClear }) {
   useEffect(() => {
     setSaved(false);
   }, [input]);
+
   return (
     <StyledInputContainer>
       <div className="editor-preview">

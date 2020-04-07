@@ -13,6 +13,7 @@ function Preview({ markdown, download }) {
   useEffect(() => {
     setCopied(false);
   }, [markdown]);
+
   return (
     <StyledPreview>
       <div className="editor-preview">

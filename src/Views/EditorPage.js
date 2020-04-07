@@ -7,7 +7,7 @@ import Editor from '../Components/Editor';
 import Preview from '../Components/Preview';
 
 const defaultText =
-  '# This is a header\n## This a secondary header\n[This is a link](https://rory.codes)\nWe can inline code snippets like `this`\nor we can create code blocks like this:\n```\nfunction isThisCool(){\n    console.log(true)\n}\n```\nWe can make lists\n- like\n- this\n\n\n> We can use blockquote, no problem!\n\nOr we can __emphasise__ text with double underscores.\n\nAnd of course, images work too!\n\n![Our alt text goes here](http://localhost:3000/static/media/image-preview.49d8f90b.png)';
+  '# This is a header\n\n## This a secondary header\n\n[This is a link](https://rory.codes)\n\nWe can inline code snippets like `this`\nor we can create code blocks like this:\n```\nfunction isThisCool(){\n    console.log(true)\n}\n```\nWe can make lists\n- like\n- this\n\n\n> We can use blockquote, no problem!\n\nOr we can __emphasise__ text with double underscores.\n\nAnd of course, images work too!\n\n![Our alt text goes here](http://localhost:3000/static/media/image-preview.49d8f90b.png)';
 
 const StyledEditorContainer = styled.div`
   width: 100%;
@@ -19,8 +19,10 @@ const StyledEditorContainer = styled.div`
   margin: 5rem 0;
 
   .editor-preview {
-    font-size: 2.2rem;
-    margin: 0 0 1.5rem 1.5rem;
+    h2 {
+      font-size: 2.2rem;
+      margin: 0 0 1.5rem 1.5rem;
+    }
   }
 `;
 function EditorPage() {

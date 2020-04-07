@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const StyledInputContainer = styled.div`
 width: 90%;
+margin: 5rem 0 ;
 `
 
 const StyledEditor = styled.textarea`
@@ -22,7 +23,7 @@ const StyledEditor = styled.textarea`
 function Editor({ input, handleChange }) {
   return (
     <StyledInputContainer>
-        <h2 className="editor-preview">Input</h2>
+      <div className="editor-preview"><h2>Input</h2></div>
       <StyledEditor
         onChange={handleChange}
         value={input}

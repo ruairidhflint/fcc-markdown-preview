@@ -13,7 +13,7 @@ const StyledPreview = styled.div`
 
   #preview {
     width: 100%;
-    height: 93%;
+    height: 78%;
     overflow-y: scroll;
     padding: 1.5rem;
     border: 1px solid rgba(10, 10, 10, 0.2);
@@ -25,7 +25,7 @@ const StyledPreview = styled.div`
 function Preview({ markdown }) {
   return (
     <StyledPreview>
-      <h2 className="editor-preview">Preview</h2>
+      <div className="editor-preview"><h2>Preview</h2></div>
       <StyledRetroMarkdown id="preview">
         <ReactMarkdown source={markdown} />
       </StyledRetroMarkdown>

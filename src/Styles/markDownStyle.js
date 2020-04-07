@@ -207,7 +207,7 @@ export const StyledRetroMarkdown = styled.div`
   }
 
   blockquote p{
-    color: red;
+    color: darkorange;
 }
 
   

@@ -10,7 +10,7 @@ const StyledEditor = styled.textarea`
 `;
 
 function Editor({ input, handleChange }) {
-  return <StyledEditor onChange={handleChange} value={input} ></StyledEditor>;
+  return <StyledEditor onChange={handleChange} value={input} id="editor"></StyledEditor>;
 }
 
 export default Editor;

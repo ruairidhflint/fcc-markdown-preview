@@ -25,7 +25,7 @@ function EditorPage() {
   return (
     <StyledEditorContainer id="main">
       <Editor handleChange={handleChange} input={input} />
-      <Preview />
+      <Preview markdown={input} />
     </StyledEditorContainer>
   );
 }

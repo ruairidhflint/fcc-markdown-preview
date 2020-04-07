@@ -84,7 +84,7 @@ function EditorPage() {
     let blob = new Blob([input], { type: 'txt' });
 
     var a = document.createElement('a');
-    a.download = 'markdown-saved';
+    a.download = 'markdown';
     a.href = URL.createObjectURL(blob);
     a.dataset.downloadurl = ['txt', a.download, a.href].join(':');
     a.style.display = 'none';

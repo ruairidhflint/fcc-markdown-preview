@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
+// Styles
 import { StyledRetroMarkdown } from '../Styles/markDownStyle';
 import { StyledPreview } from './PreviewStyle';
 

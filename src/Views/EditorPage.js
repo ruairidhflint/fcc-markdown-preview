@@ -80,6 +80,22 @@ function EditorPage() {
     }
   };
 
+  const download = () => {
+    let blob = new Blob([input], { type: 'txt' });
+
+    var a = document.createElement('a');
+    a.download = 'markdown-saved';
+    a.href = URL.createObjectURL(blob);
+    a.dataset.downloadurl = ['txt', a.download, a.href].join(':');
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () {
+      URL.revokeObjectURL(a.href);
+    }, 1500);
+  };
+
   useEffect(() => {
     const saved = localStorage.getItem('savedInput');
     if (saved) {
@@ -98,7 +114,7 @@ function EditorPage() {
         confirmClear={confirmClear}
         clear={clear}
       />
-      <Preview markdown={input} />
+      <Preview markdown={input} download={download} />
     </StyledEditorContainer>
   );
 }

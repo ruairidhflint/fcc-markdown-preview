@@ -23,7 +23,7 @@ const StyledPreview = styled.div`
   }
 `;
 
-function Preview({ markdown }) {
+function Preview({ markdown, download }) {
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
@@ -33,9 +33,12 @@ function Preview({ markdown }) {
     <StyledPreview>
       <div className="editor-preview">
         <h2>Preview</h2>
-        <CopyToClipboard text={markdown} onCopy={() => setCopied(true)}>
-          <button id="copy">{copied ? 'Copied' : 'Copy'} </button>
-        </CopyToClipboard>
+        <div className="buttons">
+          <CopyToClipboard text={markdown} onCopy={() => setCopied(true)}>
+            <button id="copy">{copied ? 'Copied' : 'Copy'} </button>
+          </CopyToClipboard>
+          <button onClick={download}>Download</button>
+        </div>
       </div>
       <StyledRetroMarkdown id="preview">
         <ReactMarkdown source={markdown} />

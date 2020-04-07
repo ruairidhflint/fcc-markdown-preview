@@ -15,11 +15,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <div className="App">
         <LandingPage />
         <EditorPage />
         <Footer />
-      </div>
     </ThemeProvider>
   );
 }

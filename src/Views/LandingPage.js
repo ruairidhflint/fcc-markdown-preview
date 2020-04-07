@@ -10,6 +10,22 @@ const StyledLanding = styled.div`
   justify-content: center;
   align-items: center;
 
+  h1 {
+    font-family: ${(props) => props.theme.titleFont};
+    font-size: 7rem;
+    max-width: 80%;
+    margin: 1rem;
+    text-align: center;
+
+    @media (max-width: 750px) {
+      max-width: 90%;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 5rem;
+    }
+  }
+
   p {
     font-size: 2rem;
     width: 40%;

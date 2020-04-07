@@ -40,7 +40,8 @@ body {
 	font-size: 67.5%;
     line-height: 1;
     box-sizing: border-box;
-    font-family: ${(props) => props.theme.mainFont};
+	font-family: ${(props) => props.theme.mainFont};
+	color: ${(props) => props.theme.black};
 }
 
 ol, ul {
@@ -64,21 +65,6 @@ a {
     color: inherit;
 }
 
-h1 {
-	font-family: ${(props) => props.theme.titleFont};
-	font-size: 7rem;
-	max-width: 80%;
-	margin: 1rem;
-	text-align: center;
-
-	@media(max-width:750px){
-		max-width: 90%;
-	}
-
-	@media(max-width:500px){
-		font-size: 5rem;
-	}
-}
 `;
 
 export default GlobalStyle;

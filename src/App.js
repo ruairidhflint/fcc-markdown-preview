@@ -8,6 +8,7 @@ import { theme } from './Styles/themes';
 
 // Views
 import LandingPage from './Views/LandingPage';
+import EditorPage from './Views/EditorPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <GlobalStyle />
       <div className="App">
         <LandingPage />
+        <EditorPage />
       </div>
     </ThemeProvider>
   );

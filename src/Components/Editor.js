@@ -20,7 +20,7 @@ const StyledEditor = styled.textarea`
   font-size: 1.5rem;
 `;
 
-function Editor({ input, handleChange, save, clear }) {
+function Editor({ input, handleChange, save, clear, confirmClear }) {
     const [saved, setSaved] = useState(false);
     const callSave = () => {
         save();
@@ -39,7 +39,7 @@ function Editor({ input, handleChange, save, clear }) {
             {saved ? 'Saved' : 'Save'}
           </button>
           <button onClick={clear} id="clear">
-            Clear
+              {confirmClear ? 'Sure?' : 'Clear'}
           </button>
         </div>
       </div>

@@ -44,6 +44,7 @@ const StyledEditorContainer = styled.div`
 
       &#clear {
         color: red;
+        font-size: 1.2rem;
       }
 
       :hover {
@@ -59,6 +60,7 @@ const StyledEditorContainer = styled.div`
 `;
 function EditorPage() {
   const [input, setInput] = useState('');
+  const [confirmClear, setConfirmClear] = useState(false);
 
   const handleChange = (e) => {
     setInput(e.target.value);
@@ -69,8 +71,13 @@ function EditorPage() {
   };
 
   const clear = () => {
-    localStorage.clear();
-    setInput('');
+    if (!confirmClear) {
+      setConfirmClear(true);
+    } else {
+      localStorage.clear();
+      setInput('');
+      setConfirmClear(false);
+    }
   };
 
   useEffect(() => {
@@ -88,6 +95,7 @@ function EditorPage() {
         handleChange={handleChange}
         input={input}
         save={save}
+        confirmClear={confirmClear}
         clear={clear}
       />
       <Preview markdown={input} />

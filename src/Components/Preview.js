@@ -18,7 +18,7 @@ const StyledPreview = styled.div`
   #preview {
     width: 100%;
     height: 93%;
-    border: 2px solid black;
+    border: 1px solid black;
   }
 `;
 

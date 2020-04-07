@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const StyledEditor = styled.textarea`
   width: 90%;
   height: 25vh;
-  border: 2px solid black;
+  border: 1px solid black;
   resize: none;
 `;
 

@@ -3,11 +3,11 @@ import React from 'react';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 
-import {StyledMarkdown} from '../Styles/markDownStyle';
+import {StyledMarkdown, StyledRetroMarkdown} from '../Styles/markDownStyle';
 
 const StyledPreview = styled.div`
   width: 90%;
-  min-height: 60vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -22,6 +22,7 @@ const StyledPreview = styled.div`
   #preview {
     width: 100%;
     height: 93%;
+    overflow-Y: scroll;
     padding: 1.5rem;
     border: 1px solid rgba(10,10,10,0.2);
     border-radius: 0.6rem;
@@ -33,9 +34,9 @@ function Preview({ markdown }) {
   return (
     <StyledPreview>
       <h2 className="editor-preview">Preview</h2>
-      <StyledMarkdown id="preview">
+      <StyledRetroMarkdown id="preview">
         <ReactMarkdown source={markdown} />
-      </StyledMarkdown>
+      </StyledRetroMarkdown>
     </StyledPreview>
   );
 }

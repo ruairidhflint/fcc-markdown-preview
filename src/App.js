@@ -11,7 +11,6 @@ import LandingPage from './Views/LandingPage';
 import EditorPage from './Views/EditorPage';
 import Footer from './Components/Footer';
 
-import image from './Assets/image-preview.png';
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
         <LandingPage />
         <EditorPage />
         <Footer />
-        <img src={image} alt="" />
     </ThemeProvider>
   );
 }

@@ -73,6 +73,10 @@ function EditorPage() {
       setInput('');
   }
 
+  const copy = () => {
+      document.execCommand('copy')
+  }
+
   useEffect(() => {
       const saved = localStorage.getItem('savedInput');
       if(saved){
